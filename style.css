@@ -1,24 +1,40 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body{
     background-color: #001;
+    display: flex;
+
 }
+/* menu */
 
 .img-box{
     width: 50px;
     height: 50px;
     border-radius: 50%;
     overflow: hidden;
+    border: 3px solid white;
+    flex-shrink: 0;
 }
 
 .img-box img{
     width: 100%;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile h2{
+    font-size: 20px;
+    text-transform: capitalize;
 }
 
 .menu{
@@ -28,8 +44,14 @@ body{
     padding: 20px;
     /* min-width: 180px ;
     max-width: 360px ; */
-    width: 260px;
+    width: 60px;
     height: 100vh;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu:hover{
+    width: 260px;
 }
 
 ul{
@@ -38,11 +60,6 @@ ul{
     height: 95%;
 }
 
-.profile{
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
 
 .menu a{
     text-decoration: none;
@@ -54,7 +71,7 @@ ul{
     margin: 10px 0;
     transition: .5s;
 }
-.menu a:hover,.active{
+.menu a:hover,.active,.data-info .box:hover{
     background-color: #ffffff55;
 }
 
@@ -69,4 +86,48 @@ width: 100%;
 
 ul li a i {
     font-size: 30px;
+}
+/* menu end */
+
+/* content */
+.content{
+    /* background-color: #a00; */
+    width: 100%;
+    margin: 10px;
+}
+
+.title-info{
+    background-color: rgba(0, 255, 255, 0.253);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.data-info{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+.data-info .box{
+    background-color: #123;
+    display: flex;
+    align-items: center;
+    flex-basis: 150px;
+    height: 150px;
+    margin: 10px;
+    padding: 10px;
+    justify-content: space-around;
+    gap: 10px;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    border-radius: 8px;
+}
+
+.data-info .box i{
+    font-size: 40px;
 }
