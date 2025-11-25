@@ -71,7 +71,7 @@ ul{
     margin: 10px 0;
     transition: .5s;
 }
-.menu a:hover,.active,.data-info .box:hover{
+.menu a:hover,.active,.data-info .box:hover , td:hover{
     background-color: #ffffff55;
 }
 
@@ -105,7 +105,9 @@ ul li a i {
     border-radius: 8px;
     margin: 10px 0;
 }
-
+.title-info i{
+    font-size: 30px;
+}
 .data-info{
     display: flex;
     flex-wrap: wrap;
@@ -130,4 +132,34 @@ ul li a i {
 
 .data-info .box i{
     font-size: 40px;
+}
+
+.data-info .box .data{
+    text-align: center;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    border-spacing: 8px;
+}
+td,th{
+    background-color: #123;
+    height: 40px;
+    border-radius: 8px;
+}
+th{
+    background-color: rgba(0, 255, 255, 0.253);
+}
+.price,.Count{
+    padding: 6px;
+    border-radius: 6px;
+}
+.price{
+    background-color: green;
+}
+.Count{
+    background-color: rgb(165, 143, 15);
+    color: #001;
 }
